@@ -10,8 +10,11 @@ def linearregression(x,y):
     i=0
     for i in range(steps):
         y_pred = m_current * x + b_current
+        # print(type(y_pred))
+        # print("predicted y is:",y_pred,"\n")
         md = -(2/n)* sum(x*(y-y_pred))
         bd = -(2/n)* sum((y-y_pred))
+        # print("md:",md ," ,bd:",bd)
         m_current = m_current - step_size * md
         b_current = b_current - step_size * bd
         print("m:",m_current," b:",b_current," steps:",i+1)
@@ -33,7 +36,6 @@ a = model.coef_
 b = model.intercept_
 print("slope:",a)
 print("intercept:",b)
-
 
 
     
